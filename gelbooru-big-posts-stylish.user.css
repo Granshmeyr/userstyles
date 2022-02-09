@@ -1,0 +1,59 @@
+/* ==UserStyle==
+@name           Gelbooru | BIG Thumbnails for "Posts"
+@namespace      https://github.com/Granshmeyr/userscripts
+@version        0.0.1
+@description    Enlarge and crop post thumbnails.
+@author         Grindle
+==/UserStyle== */
+
+@-moz-document url-prefix(/*[["https://ab.cd/"]]*/), url-prefix("https://ab.cd/") {
+article.thumbnail-preview img {
+    width: calc(100vw / /*[[column]]*/);
+    height: calc(100vw / /*[[column]]*/);
+    
+    max-width: unset !important;
+    max-height: unset !important;
+    object-fit: cover !important;
+}
+
+.thumbnail-preview {
+    width: calc(100vw / /*[[column]]*/);
+    height: calc(100vw / /*[[column]]*/);
+    
+    margin-top: 0px !important;
+}
+
+/* Settings for small viewport mode (<850px) */
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+    .thumbnail-preview {
+        width: 33.33vw !important;
+        height: 33.33vw !important;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+    article.thumbnail-preview img {
+        width: 33.33vw !important;
+        height: 33.33vw !important;
+    }
+}
+
+/* These are for removing the tags sidebar */
+.aside {
+    display: none !important;
+}
+
+#container {
+    grid-template-columns: auto !important;
+}
+
+/* Hides scrollbars */
+body::-webkit-scrollbar {
+  display: none;
+}
+    
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}   
+}
