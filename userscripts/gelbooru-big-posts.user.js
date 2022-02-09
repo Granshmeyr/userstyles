@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Gelbooru | BIG Thumbnails for "Posts"
 // @namespace     https://github.com/Granshmeyr/userstyles
-// @description	  Enlarge and crop post thumbnails.
+// @description	 ⠀Enlarge and crop post thumbnails.
 // @author        Grindle
 // @homepage      https://github.com/Granshmeyr/userstyles
 // @include       https://gelbooru.com/index.php?page=post&s=list*
@@ -10,8 +10,8 @@
 // ==/UserScript==
 (function() {var css = [
 	"article.thumbnail-preview img {",
-	"    width: calc(100vw / 5);",
-	"    height: calc(100vw / 5);",
+	"    width: calc(100vw / 5); /* Change denominator to desired column amount */",
+	"    height: calc(100vw / 5); /* Change denominator to desired column amount */",
 	"    ",
 	"    max-width: unset !important;",
 	"    max-height: unset !important;",
@@ -19,8 +19,8 @@
 	"}",
 	"",
 	".thumbnail-preview {",
-	"    width: calc(100vw / 5);",
-	"    height: calc(100vw / 5);",
+	"    width: calc(100vw / 5); /* Change denominator to desired column amount */",
+	"    height: calc(100vw / 5); /* Change denominator to desired column amount */",
 	"    ",
 	"    margin-top: 0px !important;",
 	"}",
