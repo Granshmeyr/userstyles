@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name          Gelbooru | BIG Thumbnails for "Posts"
-// @namespace     https://github.com/Granshmeyr/userscripts
+// @namespace     https://github.com/Granshmeyr/userstyles
 // @description	  Enlarge and crop post thumbnails.
 // @author        Grindle
-// @homepage      https://github.com/Granshmeyr/userscripts
+// @homepage      https://github.com/Granshmeyr/userstyles
 // @include       https://gelbooru.com/index.php?page=post&s=list*
 // @run-at        document-idle
 // @version       0.0.1
