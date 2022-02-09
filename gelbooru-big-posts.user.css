@@ -47,7 +47,7 @@ article.thumbnail-preview img {
     grid-template-columns: auto !important;
 }
 
-/* Hide scrollbars; don't know how to do this without using vw right now */
+/* Hides scrollbars */
 body::-webkit-scrollbar {
   display: none;
 }
