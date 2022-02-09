@@ -1,0 +1,46 @@
+/* ==UserStyle==
+@name           Gelbooru | BIG Thumbnails for "Posts"
+@namespace      github.com/Granshmeyr/userscripts/
+@version        0.0.1
+==/UserStyle== */
+@-moz-document url-prefix("https://gelbooru.com/index.php?page=post&s=list") {
+article.thumbnail-preview img {
+    width: 20vw; /* (100 / column_number)vw for custom column amount */
+    height: 20vw; /* (100 / column_number)vw for custom column amount */
+    
+    max-width: unset !important;
+    max-height: unset !important;
+    object-fit: cover !important;
+}
+
+.thumbnail-preview {
+    width: 20vw; /* (100 / column_number)vw for custom column amount */
+    height: 20vw; /* (100 / column_number)vw for custom column amount */
+    
+    margin-top: 0px !important;
+}
+
+/* Settings for small viewport mode (<850px) */
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+    .thumbnail-preview {
+        width: 33.33vw !important;
+        height: 33.33vw !important;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+    article.thumbnail-preview img {
+        width: 33.33vw !important;
+        height: 33.33vw !important;
+    }
+}
+
+/* These are for removing the tags sidebar */
+.aside {
+    display: none !important;
+}
+
+#container {
+    grid-template-columns: auto !important;
+}
+}
