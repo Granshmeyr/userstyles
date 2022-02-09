@@ -1,46 +1,101 @@
+UserStyles.world
+Search userstyles...
+
+Add
+Import
+Explore
+Mod Log
+Account
+Logout
+Add userstyle
+If your UserCSS userstyle is hosted somewhere else, you can add it via import page.
+
+Please, read and understand our content guidelines before adding your userstyle.
+
+Name
+Gelbooru | BIG Thumbnails for "Posts"
+Description
+Brief description of what your userstyle does. Will be used for SEO. Supports Markdown syntax.
+e.g. Tweaks for UserStyles.world
+Notes
+In-depth guides, changelog, extra requirements, etc. Supports Markdown syntax.
+Userstyle's instructions, release notes, etc.
+Homepage
+Link to userstyle's homepage, bug tracker, etc.
+https://github.com/userstyles-world/userstyles.world
+Preview image URL
+External images must be hosted on GitHub.com, GitLab.com, or Codeberg.org.
+Link to userstyle's preview image (jpg, jpeg, png, avif, and webp formats only)
+Upload preview image
+Only jpg, jpeg, png, avif, and webp formats are allowed.No file chosen
+License
+If left empty, the style will use No License by default.
+e.g CC Zero
+Category
+Website name that your userstyle applies to. E.g.: userstyles, github, gitlab, etc.
+e.g userstyles
+Source code
 /* ==UserStyle==
 @name           Gelbooru | BIG Thumbnails for "Posts"
-@namespace      https://github.com/Granshmeyr/userscripts/blob/main/gelbooru-big-posts.user.css
-@version        0.0.1
+@namespace      userstyles.world
+@version        1.0.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://gelbooru.com/index.php?page=post&s=list") {
-    article.thumbnail-preview img {
-        width: 20vw;  /* (100 / column_number)vw for custom column amount */
-        height: 20vw; /* (100 / column_number)vw for custom column amount */
-        
-        max-width: unset !important;
-        max-height: unset !important;
-        object-fit: cover !important;
-    }
+article.thumbnail-preview img {
+    width: 20vw; /* (100 / column_number)vw for custom column amount */
+    height: 20vw; /* (100 / column_number)vw for custom column amount */
     
+    max-width: unset !important;
+    max-height: unset !important;
+    object-fit: cover !important;
+}
+
+.thumbnail-preview {
+    width: 20vw; /* (100 / column_number)vw for custom column amount */
+    height: 20vw; /* (100 / column_number)vw for custom column amount */
+    
+    margin-top: 0px !important;
+}
+
+/* Settings for small viewport mode (<850px) */
+@media only screen and (max-width: 850px) and (min-width: 500px) {
     .thumbnail-preview {
-        width: 20vw;  /* (100 / column_number)vw for custom column amount */
-        height: 20vw; /* (100 / column_number)vw for custom column amount */
-        
-        margin-top: 0px !important;
+        width: 33.33vw !important;
+        height: 33.33vw !important;
     }
-    
-    /* Settings for small viewport mode (<850px) */
-    @media only screen and (max-width: 850px) and (min-width: 500px) {
-        .thumbnail-preview {
-            width: 33.33vw !important;
-            height: 33.33vw !important;
-        }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+    article.thumbnail-preview img {
+        width: 33.33vw !important;
+        height: 33.33vw !important;
     }
-    
-    @media only screen and (max-width: 850px) and (min-width: 500px) {
-        article.thumbnail-preview img {
-            width: 33.33vw !important;
-            height: 33.33vw !important;
-        }
-    }
-    
-    /* These are for removing the tags sidebar */
-    .aside {
-        display: none !important;
-    }
-    
-    #container {
-        grid-template-columns: auto !important;
-    }
-    }
+}
+
+/* These are for removing the tags sidebar */
+.aside {
+    display: none !important;
+}
+
+#container {
+    grid-template-columns: auto !important;
+}
+}
+Add userstyle
+About
+A free and open-source, community-driven website for browsing and sharing UserCSS userstyles.
+© 2020–2022 UserStyles.world
+v1.7.0-158-g2d3d188 (Fennec Fox)
+Resources
+Documentation
+FAQs
+Changelog
+Content guidelines
+Privacy
+Security
+Support and links
+Source code
+Open an issue
+Project roadmap
+Chat on Matrix
+Chat on Discord
