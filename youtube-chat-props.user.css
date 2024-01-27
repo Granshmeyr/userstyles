@@ -5,14 +5,15 @@
 @description    Adjust properties of YouTube livestream chat.
 @author         Grindle
 @preprocessor stylus
-@var number      padding-horizontal    "Element Padding Horizontal (px):"    [7,  0, 128, 1]
-@var number      padding-vertical      "Element Padding Vertical (px):"      [7,  0, 128, 1]
-@var number      line-height           "Message Line Spacing (px):"           [14, 0, 128, 1]
-@var number      message-font-size     "Message Font Size (px):"     [12, 0, 128, 1]
-@var number      author-font-size      "Username Font Size (px):"    [12, 0, 128, 1]
-@var checkbox    author-hidden         "Hide user icons?"            0
+@var number      padding-horizontal         "Element Padding Horizontal (px):"    [7,   0, 128, 1]
+@var number      padding-vertical           "Element Padding Vertical (px):"      [7,   0, 128, 1]
+@var number      line-height                "Message Line Spacing (px):"          [14,  0, 128, 1]
+@var number      message-font-size          "Message Font Size (px):"             [12,  0, 128, 1]
+@var number      author-font-size           "User Name Size (px):"            [12,  0, 128, 1]
+@var checkbox    author-hidden              "User Icons Hidden?"                    0
+@var number      emoji-scale                "Emoji Scale (%):"                    [100, 0, 400, 1]
+@var number      emoji-margin-horizontal    "Emoji Padding Horizontal (px):"       [2, 0, 128, 1]
 ==/UserStyle== */
-
 @-moz-document url-prefix("https://www.youtube.com/live_chat") {
     yt-live-chat-text-message-renderer {
         padding: ((padding-vertical)px (padding-horizontal)px) !important;
@@ -30,7 +31,7 @@
     #author-name.member.yt-live-chat-author-chip {
         font-size: (author-font-size)px !important;
     }
-    
+
     #author-name.yt-live-chat-author-chip {
         font-size: (author-font-size)px !important;
     }
@@ -38,5 +39,10 @@
     #message.yt-live-chat-text-message-renderer {
         font-size: (message-font-size)px !important;
         line-height: (line-height)px !important;
+    }
+
+    #message.yt-live-chat-text-message-renderer .emoji.yt-live-chat-text-message-renderer {
+        scale: (emoji-scale)%;
+        margin: 0px (emoji-margin-horizontal)px 0px;
     }
 }
