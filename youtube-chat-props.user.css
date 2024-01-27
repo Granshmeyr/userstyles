@@ -9,10 +9,10 @@
 @var number      padding-vertical           "Element Padding Vertical (px):"      [7,   0, 128, 1]
 @var number      line-height                "Message Line Spacing (px):"          [14,  0, 128, 1]
 @var number      message-font-size          "Message Font Size (px):"             [12,  0, 128, 1]
-@var number      author-font-size           "User Name Size (px):"            [12,  0, 128, 1]
-@var checkbox    author-hidden              "User Icons Hidden?"                    0
+@var number      author-font-size           "User Name Size (px):"                [12,  0, 128, 1]
+@var checkbox    author-hidden              "User Icons Hidden?"                  0
 @var number      emoji-scale                "Emoji Scale (%):"                    [100, 0, 400, 1]
-@var number      emoji-margin-horizontal    "Emoji Padding Horizontal (px):"       [2, 0, 128, 1]
+@var number      emoji-margin-horizontal    "Emoji Padding Horizontal (px):"      [2, 0, 128, 1]
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/live_chat") {
     yt-live-chat-text-message-renderer {
@@ -24,7 +24,7 @@
             display: none !important;
         }
         else {
-            display: block
+            display: block !important;
         }
     }
 
@@ -42,7 +42,7 @@
     }
 
     #message.yt-live-chat-text-message-renderer .emoji.yt-live-chat-text-message-renderer {
-        scale: (emoji-scale)%;
-        margin: 0px (emoji-margin-horizontal)px 0px;
+        scale: (emoji-scale)% !important;
+        margin: 0px (emoji-margin-horizontal)px 0px !important;
     }
 }
