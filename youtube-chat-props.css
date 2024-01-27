@@ -1,0 +1,42 @@
+/* ==UserStyle==
+@name           YT Chat Props
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Adjust properties of YouTube livestream chat.
+@author         Grindle
+@preprocessor stylus
+@var number      padding-horizontal    "Element Padding Horizontal (px):"    [7,  0, 64, 1]
+@var number      padding-vertical      "Element Padding Vertical (px):"      [7,  0, 64, 1]
+@var number      line-height           "Message Line Spacing (px):"           [14, 0, 64, 1]
+@var number      message-font-size     "Message Font Size (px):"     [12, 0, 32, 1]
+@var number      author-font-size      "Username Font Size (px):"    [12, 0, 32, 1]
+@var checkbox    author-hidden         "Hide user icons?"            0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.youtube.com/live_chat") {
+    yt-live-chat-text-message-renderer {
+        padding: ((padding-vertical)px (padding-horizontal)px) !important;
+    }
+
+    #author-photo {
+        if author-hidden==1 {
+            display: none !important;
+        }
+        else {
+            display: block
+        }
+    }
+
+    #author-name.member.yt-live-chat-author-chip {
+        font-size: (author-font-size)px !important;
+    }
+    
+    #author-name.yt-live-chat-author-chip {
+        font-size: (author-font-size)px !important;
+    }
+
+    #message.yt-live-chat-text-message-renderer {
+        font-size: (message-font-size)px !important;
+        line-height: (line-height)px !important;
+    }
+}
